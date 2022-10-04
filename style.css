@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+body{
+    background-color: #eceff1;
+
+}
+.grid-container{
+    height: 100vh;
+}
+nav{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: blueviolet;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 1em;
+}
+ul li{
+    padding-right: 1em;
+    font-weight: bold;
+    font-size: 12px;
+    
+}
+li:first-child{
+    margin-right: auto;
+    padding-left: 10px;
+}
+li:hover{
+    color: rgb(212, 205, 205);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+h2{
+    font-size: 20px;
+}
+.search{
+    width: 150px;
+    border: none;
+    border-radius:4px;
+    padding-left: 10px;
+}
+.search:focus{
+    outline-color: blueviolet;
+}
+.grid-cards-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin:10px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.grid-card{
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    border-top: 3px solid blueviolet;
+    margin: 5px 0px 5px 0px;
+}
+.date-time{
+    color: gray;
+    font-size: 8px;
+}
+.card-header{
+    font-weight: 600;
+    font-size: 11px;
+    margin: 4px 4px 4px 0px;
+}
+.card-body{
+    color: rgb(29, 25, 25);
+}
+
+@media only screen and (max-width:400px) {
+    .grid-cards-container{
+        grid-template-columns: 1fr;
+
+    }
+}

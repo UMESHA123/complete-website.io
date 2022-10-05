@@ -3,11 +3,28 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 32px;
+    font-size: 11px;
+}
+:root{
+    --background-color:#eceff1;
+    --primary-color:blueviolet;
+    --card-background-color:white;
+    --date-time:gray;
+    --card-text-color:rgb(29, 25, 25);
+    --header-color:black;
+}
+.dark-mode{
+    --background-color:#263238;
+    --primary-color:#09d171;
+    --card-background-color:rgb(3, 3, 3);
+    --date-time:#e0f7fa;
+    --header-text-color:white;
+    --card-text-color:rgb(245, 245, 245);
+    --header-color:white;
 }
 
 body{
-    background-color: #eceff1;
+    background-color: var(--background-color);
 
 }
 .grid-container{
@@ -17,8 +34,8 @@ nav{
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: blueviolet;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--header-text-color);
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -48,6 +65,7 @@ header{
     display: flex;
     justify-content: space-between;
     margin: 10px;
+    color: var(--header-color);
 }
 h2{
     font-size: 20px;
@@ -59,7 +77,7 @@ h2{
     padding-left: 10px;
 }
 .search:focus{
-    outline-color: blueviolet;
+    outline-color: var(--primary-color);
 }
 .grid-cards-container{
     display: grid;
@@ -69,28 +87,29 @@ h2{
     row-gap: 10px;
 }
 .grid-card{
-    background-color: white;
+    background-color: var( --card-background-color);
     padding: 10px;
     border-radius: 4px;
-    border-top: 3px solid blueviolet;
+    border-top: 3px solid var(--primary-color);
     margin: 5px 0px 5px 0px;
 }
 .date-time{
-    color: gray;
+    color: var(--date-time);
     font-size: 8px;
 }
 .card-header{
     font-weight: 600;
     font-size: 11px;
     margin: 4px 4px 4px 0px;
+    color: var(--header-color);
 }
 .card-body{
-    color: rgb(29, 25, 25);
+    color: var(--card-text-color);
 }
 
 @media only screen and (max-width:400px) {
     .grid-cards-container{
         grid-template-columns: 1fr;
-
+        font-size: 16px;
     }
 }
